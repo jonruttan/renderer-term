@@ -1,0 +1,36 @@
+fileTypes: [
+  "term"
+  "vt100"
+]
+tags:
+  body:
+    open: "\x1b[0;39;49m"
+    close: "\x1b[0;39;49m"
+  line:
+    close: "\n"
+  scope:
+    open: "\x1b[\\0m"
+    close: "\x1b[\\1m"
+    escape: [
+      {
+        pattern: "\\..+$"
+        replace: ''
+      }
+    ]
+translations:
+  'constant': '34'
+  'entity': '1;34'
+  'keyword': '33'
+  # 'meta': '0'
+  'punctuation': '32'
+  'storage': '1;32'
+  'string': '32'
+  'variable': '34'
+  '.': [
+    {
+      pattern: '.*'
+      replace: '0'
+    }
+  ]
+name: "Terminal"
+scopeName: "text.term"
